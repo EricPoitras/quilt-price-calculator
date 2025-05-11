@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  if (window.location.pathname.includes("/new-page")) {
     console.log("Calculator script is running");
 
     const container = document.createElement("div");
@@ -75,6 +74,5 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("height").addEventListener("input", calculatePrice);
     document.getElementById("width").addEventListener("input", calculatePrice);
     document.getElementById("batting").addEventListener("change", calculatePrice);
-  }
 });
 
