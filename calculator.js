@@ -1,0 +1,45 @@
+const CONSTANT = 0.02;
+const MINIMUM_PRICE = 50;
+
+function calculatePrice() {
+  const height = parseFloat(document.getElementById("height").value) || 0;
+  const width = parseFloat(document.getElementById("width").value) || 0;
+  const battingChecked = document.getElementById("batting").checked;
+
+  let basePrice = CONSTANT * height * width;
+  basePrice = Math.ceil(basePrice);
+
+  const battingCharge = battingChecked ? (width <= 80 ? 30 : 40) : 0;
+
+  let totalPrice;
+  let useBaseRate = false;
+
+  if (basePrice < MINIMUM_PRICE) {
+    totalPrice = MINIMUM_PRICE + battingCharge;
+    useBaseRate = true;
+  } else {
+    totalPrice = basePrice + battingCharge;
+  }
+
+  const note = document.getElementById("note");
+  const priceDisplay = document.getElementById("priceDisplay");
+
+  if (useBaseRate) {
+    note.style.display = "block";
+    priceDisplay.textContent = formatCurrency(totalPrice) + "*";
+  } else {
+    note.style.display = "none";
+    priceDisplay.textContent = formatCurrency(totalPrice);
+  }
+}
+
+function formatCurrency(amount) {
+  return new Intl.NumberFormat("en-CA", {
+    style: "currency",
+    currency: "CAD"
+  }).format(amount);
+}
+
+document.getElementById("height").addEventListener("input", calculatePrice);
+document.getElementById("width").addEventListener("input", calculatePrice);
+document.getElementById("batting").addEventListener("change", calculatePrice);
