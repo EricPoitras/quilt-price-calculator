@@ -1,15 +1,24 @@
 body {
-  font-family: Inter, system-ui, "Segoe UI", Roboto, Arial, sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: Inter, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
   font-size: 18px;
+  margin: 0;
   padding: 20px;
   background-color: white;
   color: rgb(25, 25, 25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 .calculator {
   display: flex;
   flex-direction: column;
+  width: 100%;
   max-width: 550px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .label {
@@ -20,6 +29,7 @@ body {
 .row {
   display: flex;
   align-items: center;
+  flex-wrap: nowrap; /* Prevent wrapping */
   gap: 15px;
   margin-bottom: 10px;
 }
@@ -28,6 +38,7 @@ body {
   display: flex;
   align-items: center;
   gap: 5px;
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 label {
@@ -53,9 +64,10 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .price-display {
   font-weight: bold;
-  margin-left: 20px;
   font-size: 1.1em;
   min-width: 120px;
+  margin-left: auto; /* Pushes it to the far right */
+  white-space: nowrap; /* Prevents breaking into multiple lines */
 }
 
 .note {
