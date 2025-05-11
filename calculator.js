@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     container.className = "calculator";
     container.innerHTML = `
       <div class="label">Quilt Price Calculator</div>
-      <p>Curious how much your custom quilt will cost? Use the calculator below to get an instant estimate — including batting if needed!</p>
+      <p>Curious how much your edge-to-edge longarm quilting service will cost? Use the calculator below to get an instant estimate — including batting if needed!</p>
       <div class="row">
         <div class="input-group">
           <label for="height">Height (in):</label>
