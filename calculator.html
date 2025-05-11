@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quilt Price Calculator</title>
+  <link rel="stylesheet" href="https://yourusername.github.io/quilt-price-calculator/calculator.css"> <!-- Replace with your hosted URL -->
+</head>
+<body>
+  <div class="calculator">
+    <div class="label">Quilt Price Calculator</div>
+    <div class="row">
+      <div class="input-group">
+        <label for="height">Height (in):</label>
+        <input type="number" id="height" value="0" min="0" />
+      </div>
+      <div class="input-group">
+        <label for="width">Width (in):</label>
+        <input type="number" id="width" value="0" min="0" />
+      </div>
+      <div class="price-display" id="priceDisplay">$0.00 CAD</div>
+    </div>
+
+    <div class="row">
+      <label>
+        <input type="checkbox" id="batting" />
+        Batting required
+      </label>
+    </div>
+
+    <div class="note" id="note" style="display: none;">
+      * A base rate of $50 minimum applies before batting charges.
+    </div>
+  </div>
+
+  <script src="https://yourusername.github.io/quilt-price-calculator/calculator.js"></script> <!-- Replace with your hosted URL -->
+</body>
+</html>
