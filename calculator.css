@@ -19,6 +19,7 @@ body {
   max-width: 550px;
   padding: 20px;
   box-sizing: border-box;
+  line-height: min(calc(2em - 4px),calc(.8em + 23px));
 }
 
 .label {
