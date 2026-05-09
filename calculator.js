@@ -17,11 +17,11 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <div class="price-display" id="priceDisplay">$0.00 CAD</div>
       </div>
-      <div class="row">
+      <!--<div class="row">
         <label><input type="checkbox" id="batting" /> Batting required</label>
-      </div>
+      </div>-->
       <div class="note" id="note" style="display: none;">
-        * A base rate of $50 minimum applies before batting charges.
+        * A base rate of $50 minimum applies.
       </div>
     `;
 
@@ -36,21 +36,21 @@ document.addEventListener("DOMContentLoaded", function () {
     function calculatePrice() {
       const height = parseFloat(document.getElementById("height").value) || 0;
       const width = parseFloat(document.getElementById("width").value) || 0;
-      const battingChecked = document.getElementById("batting").checked;
+      //const battingChecked = document.getElementById("batting").checked;
 
       let basePrice = CONSTANT * height * width;
       basePrice = Math.ceil(basePrice);
 
-      const battingCharge = battingChecked ? (width <= 80 ? 30 : 40) : 0;
+      //const battingCharge = battingChecked ? (width <= 80 ? 30 : 40) : 0;
 
       let totalPrice;
       let useBaseRate = false;
 
       if (basePrice < MINIMUM_PRICE) {
-        totalPrice = MINIMUM_PRICE + battingCharge;
+        totalPrice = MINIMUM_PRICE;
         useBaseRate = true;
       } else {
-        totalPrice = basePrice + battingCharge;
+        totalPrice = basePrice;
       }
 
       const note = document.getElementById("note");
