@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     container.className = "calculator";
     container.innerHTML = `
       <div class="label"><strong>Quilt Price Calculator</strong></div>
-      <p>Curious how much your edge-to-edge longarm quilting service will cost? Use the calculator below to get an instant estimate — including batting if needed!</p>
+      <p>Curious how much your edge-to-edge longarm quilting service will cost? Use the calculator below to get an instant estimate. Simply enter your quilt dimensions to calculate your price. Edge-to-edge quilting is $0.0225 per square inch, with dense quilting available at $0.03 per square inch. Batting and wide backing are also available for purchase. Visit the shop to browse the selection.</p>
       <div class="row">
         <div class="input-group">
           <label for="height">Height (in):</label>
