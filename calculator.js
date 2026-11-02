@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     target.appendChild(container);
 
     // Pricing logic
-    const CONSTANT = 0.0225;
+    const CONSTANT = 0.025;
     const MINIMUM_PRICE = 50;
 
     function calculatePrice() {
